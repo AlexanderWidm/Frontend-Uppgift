@@ -181,7 +181,7 @@ button{
 
 
 
-@media  (max-width: 1560px){
+@media  (max-width: 1561px){
     .img-container, img{
         display: flex;
         flex-direction: column;
