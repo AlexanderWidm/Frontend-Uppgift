@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "montserrat";
+    font-family: Montserrat;
 }
 
 nav {
@@ -16,11 +16,20 @@ nav {
     width: 100%;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
 label.logo{
     color: #000000;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 70px;
+    font-weight: 900;
+    font-family: "Montserrat ExtraBold";
 }
 
 nav ul {
@@ -40,12 +49,14 @@ nav ul li a{
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 a.active,a:hover {
     background: #12620c;
     transition: .5s;
     color: white;
+    opacity: 80%;
 }
 
 .checkbtn{
@@ -70,9 +81,21 @@ a.active,a:hover {
 }
 
 .article{
-    background: #0c9e27;
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    max-height: 1500px;
     width: 100%;
+    align-items: center;
+    padding: 50px;
+}
+
+.article h1{
+    font-size: 60px;
+    padding: 50px;
+}
+.article h2{
+    padding-bottom: 20px;
 }
 
 .container{
@@ -90,20 +113,25 @@ a.active,a:hover {
 
 .container .info h1{
     font-size: 120px;
+    min-width: 300px;
+    font-weight: 900;
+    font-family: "Montserrat ExtraBold";
 }
 
 .container .info h2{
     font-size: 40px;
+    font-weight: 900;
 }
 
 .container .info p{
     margin: 10px;
     font-size: 20px;
+    font-weight: 900;
 }
 
 button{
     border: none;
-    color: black;
+    color: #ffffff;
     padding: 20px 40px;
     text-align: center;
     text-decoration: none;
@@ -112,18 +140,61 @@ button{
     width: 250px;
     opacity: 80%;
     transition-duration: 0.4s;
+    background-color: #2C5032FF;
+    border-radius: 10px;
 }
 
-.join-btn:hover {
-    background-color: white;
-    color: black;
+.join-btn:hover, .learn-btn:hover{
+    background-color: #ffffff;
+    color: #000000;
 }
 .join-btn{
     margin-right: 20px;
 }
 
+.img-container, img{
+    max-width: 1600px;
+    max-height: 900px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    transition-duration: 1s;
+    opacity: 100%;
 
-@media  (max-width: 952px){
+}
+
+.arena{
+    display: none;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+
+}
+
+
+
+@media  (max-width: 1560px){
+    .img-container, img{
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        max-height: 900px;
+    }
+}
+
+i {
+    color: black;
+}
+
+@media  (max-width: 1020px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -138,13 +209,15 @@ button{
         height: calc(100vh  -  80px);
 
     }
+
+    .img-container, img{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
-i {
-    color: black;
-}
-
-@media (max-width: 858px){
+@media (max-width: 880px){
     .checkbtn{
         display: block;
     }
@@ -152,11 +225,13 @@ i {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c5032;
+        background: #ffffff;
         top: 80px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 10;
+        opacity: 90%;
     }
     nav ul li{
         display: block;
@@ -169,13 +244,13 @@ i {
     }
     a:hover,a.active{
         background: none;
-        color: #2aff1b;
+        color: #209118;
     }
     #check:checked ~ ul{
         left: 0;
     }
     .hero{
-        background: darkgreen;
+        background: url(img/soccer.jpg) no-repeat center;
         background-size: cover;
         transition: 0.5s;
         height: calc(100vh  -  80px)
@@ -190,19 +265,48 @@ i {
         justify-content: center;
         padding: 100px;
         color: #000000;
-        opacity: 0%;
     }
 
     .container .info h1{
         font-size: 50px;
+        padding-bottom: 15px;
     }
 
     .container .info h2{
         font-size: 30px;
+        padding-bottom: 15px;
     }
 
     .container .info p{
         margin: 2px;
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+
+    .buttons{
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .learn-btn{
+        margin-top: 20px;
+    }
+    .article{
+        padding: 50px;
+    }
+    .article h1{
+        font-size: 40px;
+    }
+    .article h2{
         font-size: 20px;
     }
+    .article p{
+
+    }
+
+    .img-container, img{
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
 }
