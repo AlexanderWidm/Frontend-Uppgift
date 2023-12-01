@@ -16,12 +16,6 @@ nav {
     width: 100%;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
 
 label.logo{
     color: #000000;
@@ -30,6 +24,11 @@ label.logo{
     padding: 0 70px;
     font-weight: 900;
     font-family: "Montserrat ExtraBold";
+}
+
+#barbell{
+    margin: 5px;
+    color: #a40000;
 }
 
 nav ul {
@@ -53,7 +52,7 @@ nav ul li a{
 }
 
 a.active,a:hover {
-    background: #12620c;
+    background: #a40000;
     transition: .5s;
     color: white;
     opacity: 80%;
@@ -73,8 +72,13 @@ a.active,a:hover {
     display: none;
 }
 
+#cta{
+    background-color: #a40000;
+    font-family: "Montserrat ExtraBold";
+}
+
 .hero{
-    background: url(img/soccer.jpg) no-repeat center;
+    background: url(img/gym.jpg) no-repeat center;
     background-size: cover;
     transition: .5s;
     height: calc(100vh  -  80px);
@@ -98,6 +102,45 @@ a.active,a:hover {
     padding-bottom: 20px;
 }
 
+.article p{
+    padding-bottom: 20px;
+    max-width: 70%;
+}
+
+.article2{
+    background: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    color: white;
+
+}
+
+.pt{
+    max-width: 600px;
+    float: left;
+    margin-right: 250px;
+    margin-top: 100px;
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article2 h1{
+    font-size: 25px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.article2 p{
+    padding-bottom: 20px;
+    max-width: 70%;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -107,8 +150,7 @@ a.active,a:hover {
     margin: 0 auto;
     justify-content: center;
     padding: 100px;
-    color: #000000;
-    opacity: 80%;
+    color: #a40000;
 }
 
 .container .info h1{
@@ -116,17 +158,22 @@ a.active,a:hover {
     min-width: 300px;
     font-weight: 900;
     font-family: "Montserrat ExtraBold";
+    opacity: 95%;
 }
 
 .container .info h2{
     font-size: 40px;
     font-weight: 900;
+    color: white;
+    opacity: 90%;
 }
 
 .container .info p{
     margin: 10px;
     font-size: 20px;
     font-weight: 900;
+    color: white;
+    opacity: 90%;
 }
 
 button{
@@ -140,7 +187,7 @@ button{
     width: 250px;
     opacity: 80%;
     transition-duration: 0.4s;
-    background-color: #2C5032FF;
+    background-color: #a40000;
     border-radius: 10px;
 }
 
@@ -203,8 +250,6 @@ i {
         font-size: 16px;
     }
     .hero{
-        background: url(img/soccer.jpg) no-repeat center;
-        background-size: cover;
         transition: .5s;
         height: calc(100vh  -  80px);
 
@@ -244,14 +289,12 @@ i {
     }
     a:hover,a.active{
         background: none;
-        color: #209118;
+        color: #a40000;
     }
     #check:checked ~ ul{
         left: 0;
     }
     .hero{
-        background: url(img/soccer.jpg) no-repeat center;
-        background-size: cover;
         transition: 0.5s;
         height: calc(100vh  -  80px)
     }
@@ -264,11 +307,10 @@ i {
         margin: 0 auto;
         justify-content: center;
         padding: 100px;
-        color: #000000;
     }
 
     .container .info h1{
-        font-size: 50px;
+        font-size: 80px;
         padding-bottom: 15px;
     }
 
@@ -300,7 +342,7 @@ i {
         font-size: 20px;
     }
     .article p{
-
+        max-width: 100%;
     }
 
     .img-container, img{
