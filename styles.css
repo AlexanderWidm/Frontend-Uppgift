@@ -109,13 +109,17 @@ a.active,a:hover {
 }
 
 .article2{
-    background: #313131;
+    background: #575757;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 50vh;
     color: white;
 
+}
+
+.redtext{
+    color: #A40000FF;
 }
 
 .pt{
