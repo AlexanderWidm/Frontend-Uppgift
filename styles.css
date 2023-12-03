@@ -14,6 +14,8 @@ nav {
     background: #ffffff;
     height: 80px;
     width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 
@@ -52,7 +54,7 @@ nav ul li a{
     font-weight: 900;
 }
 
-a.active,a:hover {
+a.active,nav a:hover {
     background: #a40000;
     transition: .5s;
     color: white;
@@ -125,8 +127,8 @@ a.active,a:hover {
 .pt{
     max-width: 600px;
     float: left;
-    margin-right: 250px;
     margin-top: 100px;
+    margin-right: 250px;
 }
 
 .text2{
@@ -137,8 +139,6 @@ a.active,a:hover {
 
 .article2 h1{
     font-size: 25px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
 }
 
@@ -218,8 +218,24 @@ button{
 
 }
 
-.arena{
-    display: none;
+.footercontainer{
+    height: 200px;
+    background-color: #8a8a8a;
+}
+
+.footerinfo{
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+.footerlogo{
+    color: white;
+    font-family: "Montserrat ExtraBold";
+    font-size: 35px;
+}
+
+.footerlogo h1{
+
 }
 
 .fade{
@@ -242,13 +258,17 @@ button{
         max-width: 900px;
         max-height: 900px;
     }
+    .article2 h1{
+        margin-left: 50px;
+        margin-top: 70px;
+    }
 }
 
 i {
     color: black;
 }
 
-@media  (max-width: 1020px){
+@media  (max-width: 1200px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -267,6 +287,19 @@ i {
         flex-direction: column;
     }
 
+    .pt{
+        margin-right: 0px;
+    }
+
+    .article2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pt{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 880px){
@@ -358,37 +391,16 @@ i {
         max-width: 500px;
     }
 
-    .article2{
+    .article2 {
         display: flex;
-        flex-direction: row;
-    }
+        flex-direction: column;
 
-    .img-container2{
-        display: flex;
-        flex-direction: row;
     }
 
     .pt{
-        max-width: 600px;
-        margin-right: 250px;
-        margin-top: 100px;
-    }
-
-    .text2{
         display: flex;
         justify-content: center;
+        max-width: 100%;
+        margin-top: 20px;
     }
-
-    .article2 h1{
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
-    }
-
-    .article2 p{
-        padding-bottom: 20px;
-        max-width: 70%;
-    }
-
 }
