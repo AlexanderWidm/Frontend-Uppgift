@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 nav {
@@ -25,7 +25,7 @@ label.logo{
     line-height: 80px;
     padding: 0 70px;
     font-weight: 900;
-    font-family: "Montserrat ExtraBold";
+    font-family: Montserrat ExtraBold, sans-serif;
     cursor: pointer;
 }
 
@@ -77,7 +77,7 @@ a.active,nav ul a:hover {
 
 #cta{
     background-color: #a40000;
-    font-family: "Montserrat ExtraBold";
+    font-family: Montserrat ExtraBold, sans-serif;
 }
 
 .hero{
@@ -165,7 +165,7 @@ a.active,nav ul a:hover {
     font-size: 120px;
     min-width: 300px;
     font-weight: 900;
-    font-family: "Montserrat ExtraBold";
+    font-family: Montserrat ExtraBold, sans-serif;
     opacity: 95%;
 }
 
@@ -236,7 +236,7 @@ button{
 
 .footerlogo{
     color: white;
-    font-family: "Montserrat ExtraBold";
+    font-family: Montserrat ExtraBold, sans-serif;
     font-size: 35px;
 }
 
@@ -298,7 +298,7 @@ input[type=text], input[type=submit] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 input[type=submit]{
@@ -333,8 +333,8 @@ input[type=submit]:hover {
 
 
 #abouttext{
-    background-color: #ffffff;
-    color: #000000;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
     padding: 100px;
     text-align: center;
 }
@@ -356,6 +356,33 @@ input[type=submit]:hover {
     color: #a40000;
 }
 
+/*
+------------Services page--------------
+ */
+
+.columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 200px 100px 100px 100px;
+}
+.column{
+    flex: 1;
+    padding:50px 60px 50px 60px;
+    background: rgba(0, 0, 0, 0.95);
+    transition: 0.3s;
+}
+.column h2{
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+
+
+#articleservices{
+    background: url(img/gymservices.jpg) no-repeat center;
+    background-size: cover;
+}
 
 @keyframes fade {
     from {opacity: .4}
@@ -366,6 +393,14 @@ input[type=submit]:hover {
 
 
 @media  (max-width: 1561px){
+
+    .container .info h1{
+        font-size: 90px;
+        padding-bottom: 15px;
+        margin-top: 120px;
+    }
+
+
     .img-container, img{
         display: flex;
         flex-direction: column;
@@ -378,11 +413,34 @@ input[type=submit]:hover {
         margin-left: 50px;
         margin-top: 70px;
     }
-    input[type=text], input[type=submit] {
-        width: 70%;
+
+    .footerinfo{
+        margin: 0 0 0 0;
     }
+    .footerlinks{
+        margin: 0 0 0 50px;
+    }
+
+    .footercontact{
+        margin: 0 0 0 100px;
+    }
+
+    .footercontainer{
+        padding-left: 100px;
+        margin: 0;
+    }
+
+    .footeremail{
+        margin: 0 0 0 100px;
+    }
+
+    input[type=text], input[type=submit] {
+        width: 90%;
+    }
+
     .footeremail h1{
         font-size: 20px;
+        width: 90%;
     }
 
     #abouttext{
@@ -409,6 +467,9 @@ input[type=submit]:hover {
 
 
     #articleabout h2{
+
+    }
+    .footeremail{
 
     }
 
@@ -450,9 +511,17 @@ i {
         display: flex;
         justify-content: center;
     }
-    .footeremail{
-        display: none;
+    .footerinfo {
+        max-width: 250px;
     }
+    .footerinfo p{
+        font-size: 13px;
+    }
+
+    .footeremail{
+        padding-right: 20px;
+    }
+
 }
 
 @media (max-width: 880px){
@@ -502,13 +571,15 @@ i {
         padding: 100px;
     }
 
+
     .container .info h1{
-        font-size: 80px;
+        font-size: 60px;
         padding-bottom: 15px;
+        margin-top: 130px;
     }
 
     .container .info h2{
-        font-size: 30px;
+        font-size: 20px;
         padding-bottom: 15px;
     }
 
@@ -567,28 +638,32 @@ i {
     }
     .footerinfo{
         width: 600px;
-        padding: 50px;
+        padding: 50px 0 50px 0;
+        margin: 0;
 
     }
+    .footerinfo p{
+        font-size: 15px;
+    }
     .footerlinks{
-        margin: 0 75px 0 0;
+        margin: 0 120px 0 0;
         font-size: 30px;
     }
 
 
     .footercontact{
-        margin: 0;
+        margin: 0 40px 0 0;
         padding: 30px;
         font-size: 15px;
     }
     .footeremail{
         display: contents;
-        padding: 30px 20px 50px 20px;
         width: 75%;
 
     }
     .footeremail h1{
         font-size: 26px;
+        width: 75%;
     }
     input[type=text], input[type=submit] {
         width: 75%;
