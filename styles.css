@@ -29,6 +29,14 @@ label.logo{
     cursor: pointer;
 }
 
+#logolink{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
 #barbell{
     margin: 5px;
     color: #a40000;
@@ -383,6 +391,7 @@ input[type=submit]:hover {
 #articleservices{
     background: url(img/gymservices.jpg) no-repeat center;
     background-size: cover;
+    height: 800px;
 }
 
 .column p{
@@ -445,6 +454,7 @@ input[type=submit]:hover {
 
     #articleabout, #articleservices{
         padding-left: 0;
+        height: fit-content;
     }
 
     .footerinfo{
@@ -707,16 +717,14 @@ i {
         padding: 30px;
         font-size: 15px;
     }
-    .footeremail{
+    .footeremail, #inputemail{
         display: contents;
         width: 75%;
-
     }
     .footeremail h1{
         font-size: 26px;
         width: 75%;
     }
-
 
     input[type=text], input[type=submit] {
         width: 75%;
