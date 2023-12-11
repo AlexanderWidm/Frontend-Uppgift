@@ -790,3 +790,8 @@ i {
     color: white;
 }
 
+#closepop:hover{
+    transition: 0.4s;
+    color: #a40000;
+}
+
