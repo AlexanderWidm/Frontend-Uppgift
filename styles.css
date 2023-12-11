@@ -774,20 +774,30 @@ i {
 }
 
 .popupcontent{
-    height: fit-content;
+    height: 700px;
     width: 500px;
     background: white;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 50px;
+    border-radius: 30px;
     position: relative;
-    cursor: pointer;
+}
+
+.popupcontent h3, p{
+    padding-bottom: 20px;
+}
+
+
+.popupcontent input[type=submit]:hover{
+    background-color: #a40000;
+    color: white;
 }
 
 #closepop{
     position: absolute;
-    top: -20px;
+    top: -15px;
     right: -20px;
     color: white;
+    cursor: pointer;
 }
 
 #closepop:hover{
