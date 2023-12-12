@@ -339,6 +339,7 @@ input[type=submit]:hover {
     display: flex;
     margin-left: 50px;
     color: #727272;
+    height: 20px;
 }
 
 .madeby{
@@ -774,7 +775,7 @@ i {
 }
 
 .popupcontent{
-    height: 700px;
+    height: 500px;
     width: 500px;
     background: white;
     padding: 50px;
