@@ -180,6 +180,7 @@ a.active,nav ul a:hover {
     color: #ffffff;
 }
 
+
 .container .info h1{
     font-size: 120px;
     min-width: 300px;
@@ -310,7 +311,7 @@ button{
     height: 40px;
 }
 
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit], input[type=email], input[type=password], input[type=number], input[type=date]{
     width: 100%;
     padding: 12px;
     margin: 5px 0;
@@ -380,6 +381,16 @@ input[type=submit]:hover {
     color: #a40000;
 }
 
+#service-button button{
+    color: white;
+    cursor: pointer;
+}
+
+#service-button button:hover{
+    background-color: white;
+    color: black;
+}
+
 /*
 ------------Services page--------------
  */
@@ -412,6 +423,7 @@ input[type=submit]:hover {
 .column p{
     font-size: 16px;
 }
+
 
 @keyframes fade {
     from {opacity: .4}
@@ -638,7 +650,7 @@ i {
     }
     .hero{
         transition: 0.5s;
-        height: calc(100vh  -  80px)
+        height: 100vh;
     }
     .container{
         display: flex;
@@ -648,6 +660,7 @@ i {
         max-width: 1200px;
         margin: 0 auto;
         justify-content: center;
+        align-items: center;
         padding: 100px;
     }
 
@@ -759,6 +772,25 @@ i {
     }
 }
 
+@media (max-width: 480px){
+    .join-btn, .learn-btn{
+        margin-left: 27px;
+    }
+
+    .img-container{
+        padding: 0 40px 40px 40px;
+    }
+
+    #abouttext{
+        padding: 100px 0 0 20px;
+    }
+
+    .columns{
+        margin: 200px 40px 80px 40px;
+    }
+}
+
+
 /*
 ---------Popup------------
  */
@@ -775,7 +807,7 @@ i {
 }
 
 .popupcontent{
-    height: 500px;
+    height: fit-content;
     width: 500px;
     background: white;
     padding: 50px;

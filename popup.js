@@ -1,4 +1,3 @@
-// Wrap your code in a DOMContentLoaded event listener to ensure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Check if the element with ID 'closepop' exists
     const closePopButton = document.getElementById("closepop");

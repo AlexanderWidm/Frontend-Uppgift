@@ -110,19 +110,47 @@
             <svg id="closepop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-xbox-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" /><path d="M9 8l6 8" /><path d="M15 8l-6 8" /></svg>
             <h3>Hello there!</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci nulla. Adipisci architecto consequatur debitis esse incidunt laboriosam nulla velit?</p>
-            <label>
-                <input type="text" placeholder="Name">
-            </label>
-            <label>
-                <input type="text" placeholder="Email">
+            <form action="#" method="get">
                 <label>
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Name*" required>
                 </label>
-            </label>
-            <input type="submit" value="Join">
+                <label>
+                    <input type="email" placeholder="Email*">
+                </label>
+                <label>
+                    <input type="number" placeholder="Age" min="10" max="100">
+                    <label>
+                        <input type="date" placeholder="Birthdate">
+                    </label>
+                </label>
+                <label>
+                    <input type="text" placeholder="Username*">
+                </label>
+                <label>
+                    <input type="password" placeholder="Password*">
+                </label>
+                <label>
+                    <input type="password" placeholder="Repeat Password*">
+                </label>
+                <label>
+                    Are you a student?<input type="checkbox">
+                </label>
+                <div>
+                <label>
+                    <select>
+                        <option value="Noob">I'm completely new to the gym</option>
+                        <option value="Pro">I'm an intermediate</option>
+                        <option value="Pro">I have been lifting for several years</option>
+                    </select>
+                </label>
+                </div>
+                <label>
+                    <input type="submit" value="Join">
+                </label>
+            </form>
         </div>
     </div>
-<script src="index.js"></script>
+<script src="imgslides.js"></script>
 <script src="popup.js"></script>
 </body>
 </html>
