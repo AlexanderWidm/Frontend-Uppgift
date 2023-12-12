@@ -111,20 +111,17 @@
             <h3>Hello there!</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci nulla. Adipisci architecto consequatur debitis esse incidunt laboriosam nulla velit?</p>
             <form action="#" method="get">
-                <label>
-                    <input type="text" placeholder="Name*" required>
+                <label id="name">
+                    <input type="text" placeholder="First Name*" required>
                 </label>
                 <label>
+                    <input type="text" placeholder="Last Name*">
+                </label>
+                <label id="email">
                     <input type="email" placeholder="Email*">
                 </label>
-                <label>
-                    <input type="number" placeholder="Age" min="10" max="100">
-                    <label>
-                        <input type="date" placeholder="Birthdate">
-                    </label>
-                </label>
-                <label>
-                    <input type="text" placeholder="Username*">
+                <label id="date">
+                    <input type="date" placeholder="Birthdate">
                 </label>
                 <label>
                     <input type="password" placeholder="Password*">
@@ -132,14 +129,17 @@
                 <label>
                     <input type="password" placeholder="Repeat Password*">
                 </label>
+                <div>
                 <label>
                     Are you a student?<input type="checkbox">
                 </label>
+                </div>
                 <div>
                 <label>
-                    <select>
+                    <select id="select" >
+                        <option value="Undefined" disabled selected>Select your level</option>
                         <option value="Noob">I'm completely new to the gym</option>
-                        <option value="Pro">I'm an intermediate</option>
+                        <option value="Mid">I'm an intermediate</option>
                         <option value="Pro">I have been lifting for several years</option>
                     </select>
                 </label>
