@@ -25,7 +25,7 @@ label.logo{
     line-height: 80px;
     padding: 0 70px;
     font-weight: 900;
-    font-family: Montserrat ExtraBold, sans-serif;
+    font-family: Montserrat ExtraBold, Montserrat, sans-serif;
     cursor: pointer;
 }
 
@@ -87,7 +87,7 @@ a.active,nav ul a:hover {
 #cta a{
     background-color: #000000;
     color: white;
-    font-family: Montserrat ExtraBold, sans-serif;
+    font-family: Montserrat , Montserrat, sans-serif;
     border-radius: 50px;
 }
 
@@ -185,7 +185,7 @@ a.active,nav ul a:hover {
     font-size: 120px;
     min-width: 300px;
     font-weight: 900;
-    font-family: Montserrat ExtraBold, sans-serif;
+    font-family: Montserrat ExtraBold, Montserrat, sans-serif;
     opacity: 95%;
 }
 
@@ -217,6 +217,7 @@ button{
     transition-duration: 0.4s;
     background-color: #a40000;
     border-radius: 50px;
+    font-family: "Montserrat ExtraBold", Montserrat, sans-serif;
 }
 
 .join-btn:hover, .learn-btn:hover{
@@ -256,7 +257,7 @@ button{
 
 .footerlogo{
     color: white;
-    font-family: Montserrat ExtraBold, sans-serif;
+    font-family: Montserrat ExtraBold, Montserrat, sans-serif;
     font-size: 35px;
 }
 
@@ -268,6 +269,10 @@ button{
 .footerinfo h1{
     font-size: 20px;
     color: black;
+}
+
+.footerinfo p{
+    font-size: 15px;
 }
 
 .footerlinks h1{
@@ -312,7 +317,7 @@ button{
 }
 
 input[type=text], input[type=submit], input[type=email], input[type=password], input[type=number], input[type=date]{
-    width: 100%;
+    width: fit-content;
     padding: 12px;
     margin: 5px 0;
     display: inline-block;
@@ -336,6 +341,11 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
+.footeremail input{
+    width: 100%;
+}
+
+
 .footerfoot{
     display: flex;
     margin-left: 50px;
@@ -343,8 +353,10 @@ input[type=submit]:hover {
     height: 20px;
 }
 
-.madeby{
+.madeby, .copyright{
     margin-left: 30px;
+    font-size: 20px;
+    opacity: 0.5;
 }
 
 .fade{
@@ -431,7 +443,81 @@ input[type=submit]:hover {
 
 }
 
+/*
+---------Popup------------
+ */
+.popup{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
 
+.popupcontent{
+    height: 600px;
+    width: 500px;
+    background: white;
+    padding: 50px;
+    border-radius: 40px;
+    position: relative;
+}
+
+.popupcontent h3, p{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.popupcontent h3{
+    font-size: 30px;
+    font-family: "Montserrat ExtraBold", Montserrat, sans-serif;
+}
+
+.popupcontent input[type=submit]:hover{
+    background-color: #a40000;
+    color: white;
+}
+
+#closepop{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+#closepop:hover{
+    transition: 0.4s;
+    color: #a40000;
+}
+
+.checkdiv{
+    padding: 15px 0 15px 0;
+}
+
+.selectdiv{
+    padding: 10px 0 15px 0;
+}
+
+#select{
+    padding: 10px;
+}
+
+#submit input{
+    width: 100%;
+}
+
+#box{
+    margin-left: 5px;
+}
+
+/*
+---------Medium desktop------------
+ */
 
 @media  (max-width: 1561px){
 
@@ -505,7 +591,7 @@ input[type=submit]:hover {
     }
 
     input[type=text], input[type=submit] {
-        width: 90%;
+        width: 100%;
     }
 
     .footeremail h1{
@@ -531,23 +617,15 @@ input[type=submit]:hover {
         margin: 0;
     }
 
-    #articleabout p{
-
-    }
-
-
-    #articleabout h2{
-
-    }
-    .footeremail{
-
-    }
-
 }
 
 i {
     color: black;
 }
+
+/*
+---------Laptop------------
+ */
 
 @media  (max-width: 1200px){
     label.logo{
@@ -615,6 +693,10 @@ i {
     }
 
 }
+
+/*
+---------Tablet------------
+ */
 
 @media (max-width: 880px){
     .checkbtn{
@@ -755,15 +837,15 @@ i {
     }
     .footeremail h1{
         font-size: 26px;
-        width: 75%;
+        width: 50%;
     }
 
-    input[type=text], input[type=submit] {
-        width: 75%;
+    #subscribe, #inputemail input {
+        width: 50%;
     }
 
-    .footerfoot{
-        font-size: 13px;
+    .footerfoot p{
+        font-size: 8px;
     }
 
     .columns .column{
@@ -771,6 +853,10 @@ i {
         padding: 20px 20px 20px 20px;
     }
 }
+
+/*
+---------Phone------------
+ */
 
 @media (max-width: 480px){
     .join-btn, .learn-btn{
@@ -788,55 +874,48 @@ i {
     .columns{
         margin: 200px 40px 80px 40px;
     }
+
+    .footeremail h1{
+        font-size: 20px;
+    }
+
+    .popup{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+    }
+
+    .popupcontent{
+        width: 360px;
+
+    }
+    input[type=text], input[type=email], input[type=password], input[type=number], input[type=date]{
+        padding: 5px;
+        margin: 10px 20px 0 20px;
+    }
+    .popupcontent p{
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .popupcontent h3 {
+        font-size: 30px;
+        font-family: "Montserrat ExtraBold", Montserrat, sans-serif;
+    }
+
+    #select{
+        width: 250px;
+    }
 }
 
 
-/*
----------Popup------------
- */
-.popup{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-}
 
-.popupcontent{
-    height: fit-content;
-    width: 500px;
-    background: white;
-    padding: 50px;
-    border-radius: 30px;
-    position: relative;
-}
-
-.popupcontent h3, p{
-    padding-bottom: 20px;
-}
-
-
-.popupcontent input[type=submit]:hover{
-    background-color: #a40000;
-    color: white;
-}
-
-#closepop{
-    position: absolute;
-    top: -15px;
-    right: -20px;
-    color: white;
-    cursor: pointer;
-}
-
-#closepop:hover{
-    transition: 0.4s;
-    color: #a40000;
-}
 
 
 

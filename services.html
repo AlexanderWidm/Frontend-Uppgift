@@ -22,7 +22,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a class="active" href="services.html">Services</a></li>
-            <li><a href="#">Contact</a></li>
             <li id="cta"><a href="#">Join</a></li>
         </ul>
     </nav>
@@ -58,8 +57,8 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Join</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a id="ctafooter" href="#">Join</a></li>
             </ul>
         </div>
         <div class="footercontact">
@@ -78,9 +77,9 @@
         <div class="footeremail">
             <h1>Subscribe to our newsletter!</h1>
             <label id="inputemail">
-                <input type="text" placeholder="Enter your Email Address">
+                <input type="email" placeholder="Enter your Email Address">
             </label>
-            <input type="submit" value="Subscribe">
+            <input id="subscribe" type="submit" value="Subscribe" onclick="subscribeValue()">
         </div>
     </div>
     <div class="footerfoot">
@@ -91,20 +90,52 @@
 <div class=popup>
     <div class="popupcontent">
         <svg id="closepop" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-xbox-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" /><path d="M9 8l6 8" /><path d="M15 8l-6 8" /></svg>
-        <h3>Hello there!</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci nulla. Adipisci architecto consequatur debitis esse incidunt laboriosam nulla velit?</p>
-        <label>
-            <input type="text" placeholder="Name">
-        </label>
-        <label>
-            <input type="text" placeholder="Email">
-            <label>
-                <input type="text" placeholder="Username">
+        <h3><span class="redtext">Yabes</span> Gym</h3>
+        <p>Welcome to our gym! Please fill in your name, email address, date of birth, and fitness goals to kickstart your journey.</p>
+        <form action="#" method="get" onsubmit="return validatePassword() && formSubmitted()">
+            <label id="name">
+                <input type="text" placeholder="First Name*" required>
             </label>
-        </label>
-        <input type="submit" value="Join">
+            <label>
+                <input type="text" placeholder="Last Name*">
+            </label>
+            <label id="email">
+                <input type="email" placeholder="Email*">
+            </label>
+            <label id="date">
+                <input type="date" placeholder="Birthdate">
+            </label>
+            <label>
+                <input id="password" type="password" placeholder="Password*">
+            </label>
+            <label>
+                <input id="repeatPassword" type="password" placeholder="Repeat Password*">
+            </label>
+            <div class="checkdiv">
+                <label id="checkbox">
+                    Are you a student?<input id="box" type="checkbox">
+                </label>
+            </div>
+            <div class="selectdiv">
+                <label>
+                    <select id="select">
+                        <option value="Undefined" disabled selected>What are your fitness goals?</option>
+                        <option value="Noob">Novice: New to fitness, seeking guidance.</option>
+                        <option value="Intermediate">Intermediate: Some experience, aiming to improve.</option>
+                        <option value="Advanced">Advanced: Confident in workouts, pursuing specific goals.</option>
+                        <option value="Expert">Expert: Seasoned, pushing limits for peak performance.</option>
+                        <option value="Elite">Elite: Professional-level fitness, rigorous training.</option>
+                    </select>
+                </label>
+            </div>
+            <label id="submit">
+                <input type="submit" value="Join">
+            </label>
+        </form>
     </div>
 </div>
 <script src="popup.js"></script>
+<script src="passwordValidation.js"></script>
+<script src="newsletterSubscribed.js"></script>
 </body>
 </html>

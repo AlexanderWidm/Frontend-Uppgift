@@ -34,4 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.warn("Element with ID 'ctajoin' not found.");
     }
+
+    // Check if the element with ID 'ctafooter' exists
+    const ctaFooterButton = document.getElementById("ctafooter");
+    // If the element exists, add the event listener
+    if (ctaFooterButton) {
+        ctaFooterButton.addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "flex";
+        });
+    } else {
+        console.warn("Element with ID 'ctajoin' not found.");
+    }
 });
